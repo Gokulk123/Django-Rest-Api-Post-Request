@@ -25,3 +25,4 @@ class UserRegister(serializers.ModelSerializer):
         reg.set_password(password)
         reg.save()
         return reg
+    
