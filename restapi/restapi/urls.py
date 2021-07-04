@@ -17,12 +17,12 @@ from django.contrib import admin
 from django.urls import path
 from api import views
 
-from rest_framework.authtoken.views import obtain_auth_token
+from rest_framework.authtoken.views import obtain_auth_token # django default login
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('register',views.register.as_view(),name="register"),
-    path('login',obtain_auth_token,name="login"),
-    path('welcome',views.welcome.as_view(),name="welcome")
+    path('login',obtain_auth_token,name="login"), # login with token
+    path('welcome',views.welcome.as_view(),name="welcome") # get user details using token
 ]
