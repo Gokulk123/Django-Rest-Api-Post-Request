@@ -5,6 +5,9 @@ from rest_framework.authtoken.models import Token
 from rest_framework.response import Response
 # Create your views here.
 
+# Using the APIView class is pretty much the same as using a regular View class,
+# as usual, the incoming request is dispatched to an appropriate handler method such as .get() or .post().
+
 class register(APIView):
 
      def post(self,request,format = None):

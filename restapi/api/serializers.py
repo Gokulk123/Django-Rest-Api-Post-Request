@@ -26,4 +26,4 @@ class UserRegister(serializers.ModelSerializer):
         reg.save()
         return reg
 
-    
+
